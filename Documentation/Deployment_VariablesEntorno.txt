@@ -1,0 +1,23 @@
+# Consideraciones para el deployment y variables de entorno
+
+Una vez que tenemos listo nuestro proyecto, el siguiente paso es publicarlo en Internet para que otras personas puedan verlo. Antes de realizar el deployment, es importante considerar lo siguiente:
+
+- Los proyectos desarrollados con Node y Express deben publicarse en un servidor que soporte esta plataforma.
+- Netlify es muy bueno para proyectos en React, Angular, HTML o CSS, pero no soporta proyectos en Node o Express. En estos casos, hay que buscar un hosting compatible.
+- Algunos hosting con cPanel y soporte para PHP permiten instalar Node.js, pero no todos. Algunos vienen muy restringidos.
+- Si el hosting permite instalar Node.js, es posible hospedar este tipo de proyectos allí.
+- La base de datos también debe publicarse en un servidor. Para que los usuarios puedan acceder, el acceso debe ser público.
+- Aunque es posible exponer un proyecto desde tu computadora, requiere conocimientos avanzados de seguridad e infraestructura. Lo mejor es usar un hosting adecuado.
+- Antes de desplegar el proyecto, es necesario realizar ajustes para el deployment. El primero es el uso de variables de entorno.
+
+## Variables de entorno
+
+- Las variables de entorno permiten definir valores diferentes para cada entorno, como desarrollo y producción.
+- En desarrollo, la base de datos puede estar en tu computadora local, pero en producción estará en un servidor remoto.
+- Usar variables de entorno evita exponer credenciales o datos sensibles en el código o en repositorios públicos como GitHub.
+- Desde la versión 20.6 de Node.js, ya se soportan variables de entorno sin instalar dependencias adicionales.
+- Sin embargo, muchos hostings aún usan versiones antiguas (como Node 14 o Node 18), por lo que puede ser necesario instalar manualmente el paquete `dotenv` para manejar estas variables.
+- La versión 20.9 de Node.js soporta variables de entorno de forma nativa, pero si el hosting usa una versión anterior, esta característica no funcionará hasta que actualicen su entorno.
+
+
+## Para pasar a producción utilizaremos Files, para hosting gratuito de la pagina web de producción

@@ -1,0 +1,9 @@
+Ejecuta npm init para los paquetes
+Instalas express con npm i express y npm i dotenv - variables de entorno
+Intala nodemon como desarrollo con npm i --save-dev nodemon para los cambios por servidor
+npm run dev para ejecutar el script de nodemon en el puerto indicado
+
+Agregar type en el packege.json asi:  "type": "module", antes de author,
+para que acepte los modulos ej: import express from "express";
+
+npm i pug para utilizar template engine, esto permite mezclar codigo HTML con JS u otro

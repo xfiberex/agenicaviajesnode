@@ -1,0 +1,13 @@
+// Configurar git con archivos e ignorar los necesarios
+
+git init
+
+crear archivo .gitingnore y dentro agrega solo nombre de los archivos con punto y carpetas
+
+Comando proporcionados por github
+
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/xfiberex/agenicaviajesnode.git
+git push -u origin main

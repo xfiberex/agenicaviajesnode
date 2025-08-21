@@ -1,0 +1,90 @@
+Template Engines (Motores de Plantilla)
+
+---
+
+### ¿Qué son los Template Engines?
+
+Si queremos mostrar una respuesta más completa o que el usuario vea código HTML, necesitamos agregar una vista. Los template engines o motores de plantilla son parte del modelo Vista-Controlador (MVC).
+
+- Permiten mostrar la parte visual (el HTML) en una aplicación de Express.
+- Un template engine permite acceder a los resultados que retorna el modelo (un objeto o arreglo de datos) y mostrarlos en pantalla. Por ejemplo, el resultado de una consulta a una base de datos se puede pasar a la vista para ser mostrado.
+
+---
+
+### Características de un Template Engine
+
+- **Gran Variedad y Sintaxis Propia:** Existe una gran variedad de template engines y cada uno tiene su propia sintaxis. Aprender uno no significa que sepas usarlos todos.
+- **Uso de JavaScript:** Usualmente, permiten escribir código JavaScript dentro del código HTML, por ejemplo, para iterar sobre un arreglo de datos de forma sencilla.
+- **Alternativas Modernas:** En aplicaciones que usan frameworks como Angular, React o Vue, estos suelen reemplazar la necesidad de un template engine tradicional.
+
+---
+
+### Template Engines Comunes en Node.js y Express
+
+- **Pug:** Es el más común. Anteriormente conocido como Jade, es el que se utilizará en este proyecto.
+- **EJS (Embedded JavaScript):** Permite escribir JavaScript directamente en el HTML.
+- **HBS (Handlebars) / Mustache.js:** Utilizan una sintaxis con llaves dobles.
+- **Nunjucks:** Similar a la sintaxis que se encontraría en React.js.
+
+---
+
+### Comparación de Sintaxis
+
+**1. Pug:**
+El código es muy limpio y se basa en la indentación (espacios) para definir la estructura.
+
+
+**2. Handlebars (HBS):**
+Utiliza etiquetas HTML tradicionales y llaves dobles `{{ }}` para insertar datos o lógica.
+
+```html
+{{#if tareas}}
+  {{#each tareas}}
+    <p>{{this}}</p>
+  {{/each}}
+{{/if}}
+
+**3. EJS (Embedded JavaScript):**
+<% if (tareas.length) { %>
+  <% tareas.forEach(function(tarea){ %>
+    <p><%= tarea %></p>
+  <% }); %>
+<% } %>
+
+Habilitando Pug en nuestro Proyecto
+1. Instalar la Dependencia:
+Desde la terminal, en la carpeta de tu proyecto, ejecuta:
+npm install pug
+Esta es una dependencia de producción, ya que se requiere en el servidor para que la aplicación funcione correctamente.
+2. Configurar Express para usar Pug:
+En tu archivo principal (ej. index.js), añade las siguientes líneas para configurar Pug como el motor de plantillas:
+code
+JavaScript
+// Habilitar Pug
+app.set('view engine', 'pug');
+3. Crear la Carpeta de Vistas:
+Express buscará los archivos de plantilla en una carpeta llamada views por defecto. Crea esta carpeta en la raíz de tu proyecto.
+4. Crear una Vista:
+Dentro de la carpeta views, crea un archivo con la extensión .pug. Por ejemplo, nosotros.pug.
+La sintaxis de Pug es más corta que la de HTML:
+En HTML: <h1>Hola</h1>
+En Pug: h1 Hola
+Ejemplo de nosotros.pug:
+code
+Pug
+h1 Hola desde Pug
+p También un párrafo
+5. Renderizar la Vista desde la Ruta:
+En tu archivo de rutas, en lugar de enviar texto plano con res.send(), utiliza res.render() para mostrar el archivo de la vista. No necesitas especificar la extensión .pug ni la carpeta views.
+code
+JavaScript
+// Antes:
+// router.get('/nosotros', (req, res) => {
+//   res.send('Nosotros');
+// });
+
+// Ahora, con res.render:
+router.get('/nosotros', (req, res) => {
+  res.render('nosotros'); // Busca nosotros.pug en la carpeta /views
+});
+Al guardar los cambios y recargar la página en el navegador, verás el HTML generado por Pug.

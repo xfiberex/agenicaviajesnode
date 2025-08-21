@@ -1,0 +1,40 @@
+Introducción a Node.js
+
+---
+
+### ¿Qué es Node.js?
+
+Node.js es un entorno de ejecución de JavaScript de código abierto y multiplataforma, lo que significa que puedes instalarlo en sistemas operativos como Windows, Mac o Linux. Su principal función es permitir la creación de aplicaciones del lado del servidor utilizando JavaScript.
+
+Originalmente, JavaScript fue concebido como un lenguaje para la web. Sin embargo, en los últimos años ha experimentado una evolución significativa que ahora posibilita el desarrollo de aplicaciones en el servidor. Esto te permite:
+
+- Crear APIs y aplicaciones web.
+- Acceder a archivos y leer su contenido.
+- Procesar pagos de forma segura.
+- Interactuar con bases de datos.
+- Autenticar usuarios.
+- Subir archivos.
+
+---
+
+### Ventajas de Node.js
+
+- Velocidad y Rendimiento: Node.js fue diseñado para ser rápido y eficiente, siendo una excelente opción para aplicaciones en tiempo real.
+
+- Basado en JavaScript: Si ya tienes conocimientos de JavaScript, podrás desarrollar aplicaciones full-stack sin la necesidad de aprender nuevos lenguajes o utilizar compiladores adicionales. Esto facilita la transición para aquellos que anteriormente solo usaban JavaScript para tareas sencillas como la validación de formularios.
+
+- NPM (Node Package Manager): Node.js cuenta con un vasto ecosistema de paquetes y librerías de código abierto listos para ser implementados. Con NPM, puedes encontrar herramientas para:
+    - Subir archivos.
+    - Autenticar usuarios.
+    - Enviar correos electrónicos.
+    - Gestionar plantillas (template engines).
+    - Mejorar la seguridad.
+    - La instalación de un paquete es tan simple como ejecutar el comando `npm install <nombre-del-paquete>`.
+
+- Multiplataforma y Gran Soporte: Funciona en Windows, Mac y Linux. Además, al ser una tecnología muy popular, cuenta con una amplia documentación, numerosos ejemplos y una gran comunidad de desarrolladores.
+
+---
+
+### Próximos Pasos
+
+En el siguiente video, comenzaremos a trabajar con Express para crear nuestro proyecto.

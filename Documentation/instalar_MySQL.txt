@@ -1,0 +1,16 @@
+Ingresar a este link
+
+https://dev.mysql.com/downloads/windows/installer/8.0.html
+
+Seleccionar Custom
+    Workbench
+    Server
+    Simple
+    Shell
+    Router
+
+Agregar path desde el servicio de MySQL80 como variable de entorno hasta bin\
+Descargar TablePlus
+
+Pagina para iconos https://tablericons.com/
+HTML TO PUG https://html-to-pug.com/

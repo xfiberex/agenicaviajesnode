@@ -1,0 +1,32 @@
+extends ./layout/index
+
+block slider 
+    .slider 
+        h1 Rio de Janeiro
+        em aventura
+
+block contenido
+    main.container.mt-5 
+        h2.text-center.mb-5 Sobre Nosotros
+        .row.mb-5
+            .col-md-6 
+                p Officia non occaecat aliquip non pariatur sint tempor qui. Aliquip adipisicing pariatur aliqua eu excepteur duis ut ut labore incididunt laboris laborum exercitation cupidatat. Quis esse officia dolor commodo ex nisi voluptate ex deserunt sunt. Ut tempor proident qui reprehenderit enim exercitation enim cupidatat consequat dolore consectetur fugiat amet deserunt. Quis consequat dolor irure exercitation labore culpa exercitation enim reprehenderit sit commodo deserunt. Eiusmod in excepteur anim in magna anim commodo anim anim ex eiusmod sunt. Exercitation nisi in adipisicing minim et voluptate id sunt dolor magna.
+                p Mollit ut excepteur minim nulla occaecat. Ea do labore veniam aute culpa veniam esse mollit. Officia et esse officia minim excepteur deserunt ipsum sint ad proident qui.
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg" alt="fotoNosotros" class="img-fluid")
+            
+        include ./layout/bloque_viajes
+    
+    .descuento 
+        .container
+            .row
+                .col-md-6 
+                    .contenido 
+                        h3 5% de Descuento
+                        p.titulo Viaje a Canada
+                        p.fecha Desde el 25 de Agosto de 2025, hasta el 30 del mismo mes
+                        p.precio $2,500 USD
+            
+    .container
+        h2.mt-5.text-center Testimoniales 
+        include ./layout/bloque_testimoniales
