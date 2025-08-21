@@ -6,8 +6,15 @@ crear archivo .gitingnore y dentro agrega solo nombre de los archivos con punto 
 
 Comando proporcionados por github
 
+ingresar usuario antes de
+git config --global user.name "xfiberex"
+git config --global user.email "rickystrong79@gmail.com"
+
 git add .
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/xfiberex/agenicaviajesnode.git
 git push -u origin main
+
+Al hacer cambios en el codigo
+git status
