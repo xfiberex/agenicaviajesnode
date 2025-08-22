@@ -18,3 +18,9 @@ git push -u origin main
 
 Al hacer cambios en el codigo
 git status
+
+para confirmar cambios
+git commit -m "Descripción breve de los cambios"
+
+para subir los cambios al repositorio
+git push origin main
